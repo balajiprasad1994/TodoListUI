@@ -1,0 +1,201 @@
+/* app css stylesheet */
+
+.loginview {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+  height: 100vh;
+}
+
+.loginview .showreg{
+  color:green;
+  font-size:16px;
+  text-decoration:underline;
+  margin-left: 1em;
+}
+
+.lform {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.lform .lform-heading{
+  margin-bottom: 10px;
+}
+.lform .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.lform .form-control:focus {
+  z-index: 2;
+}
+.lform input[type="text"] {
+  margin-bottom: -0.8em;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.lform input[type="password"] {
+  margin-bottom: 0.5em;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.lform .wrong{
+  color:red;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px; 
+  background-color: #f5f5f5;
+}
+
+.text-muted{
+  color: red;
+}
+
+.regform {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+  height: 100vh;
+}
+
+.rform {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+
+.rform .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.rform .form-control:focus {
+  z-index: 2;
+}
+.rform input[type="text"] {
+  margin-bottom: -0.8em;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.rform input[type="password"] {
+  margin-bottom: -0.8em;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.rform .correct {
+  color: red;
+}
+
+
+.viewdash{
+  background-color: #eee;
+  height: 100vh;
+}
+
+.header{
+  margin-left:2em;
+  margin-bottom: 0.5em;
+  font-size: 20px;
+  color:red;
+}
+
+.header .logout{
+  margin-left: 54em;
+  margin-right: 2em;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.add{
+  margin-left:5em;
+  font-size: 25px;
+  margin-right: 45em;
+}
+
+.add .showtaskadd{
+  font-size: 20px;
+  margin-right: 45em;
+}
+
+.dash{
+  margin-left:5em;
+  font-size: 25px;
+}
+
+.tree{
+  margin-left:5em;
+  font-size: 25px;
+  width:500px;
+}
+
+.markedtree{
+  margin-left:5em;
+  font-size: 25px;
+  width:500px;
+}
+
+.markedtreeheading{
+  margin-left:5em;
+  /*font-size: 25px;*/
+  width:500px;
+}
+
+.angular-ui-tree-handle {
+    background: #f8faff;
+    border: 1px solid #dae2ea;
+    color: #7c9eb2;
+    padding: 10px 10px;
+}
+
+.angular-ui-tree-handle:hover {
+    color: #438eb9;
+    background: #f4f6f7;
+    border-color: #dce2e8;
+}
+
+.angular-ui-tree-placeholder {
+    background: #f0f9ff;
+    border: 2px dashed #bed2db;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*.dash .editdelete{
+  color:blue;
+}
+
+.dash .editdelete .editname{
+  color:yellow;
+}*/
+.sidebar-module {
+  padding: 15px;
+  margin-top: -10em;
+  margin-left:40em;
+  font-size: 23px;
+}
+
+.ng-invalid.ng-dirty {
+border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+border-color: #78FA89;
+}

@@ -1,0 +1,92 @@
+<div class="viewdash">
+<div class="header">
+  <b> Hello Todo-er! </b>
+<div class="logout">
+<button type="submit" class="btn btn-warning" ng-click="logout()">I will visit later!</button>
+</div>  
+</div>
+
+<div class="add">
+  <div class="addtask">
+  <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="add()"> Add task </button>
+  </div>
+<div class="showtaskadd" ng-show="showadd"></br>
+  <form ng-submit="addtask()">
+  Taskname:
+  <input type="text" name="task_name" ng-model="addTaskName">
+  <br>
+  <input type="submit" value="Add this!">
+</form>
+</div>
+</div>
+<br>
+ <!-- <div class="dash">
+  <ul class="task-list">
+    <li class="task-list-item" ng-repeat="task in tasks">{{task.taskName}}
+  <div class="editdelete">
+     <a ng-click="edit($index,task.id)"> <u>edit</u></a>&nbsp;<a ng-click="delete($index,task.id)"><u>delete</u></a>
+  </div>
+  </li>
+  </ul>
+ <div ng-show="editname"></br>
+  Enter new task name:</br>
+  <input type="text" ng-model="newNameOld" required></br>
+  <input type="submit" value="done" ng-click="editclose()">
+      </br>
+</div>
+</div> -->
+
+<div ui-tree class="tree">
+  <ol ui-tree-nodes="tasks" ng-model="tasks">
+    <li ng-repeat="task in tasks" ui-tree-node>
+     <!--  <div ui-tree-handle ng-show="!editedItems[task.id]">
+    <a class="pull-right btn btn-danger btn-xs" data-nodrag="" ng-click="delete($index,task.id)"><span class="glyphicon glyphicon-remove"></span></a>
+    <a href="" class="btn btn-primary btn-xs pull-right" data-nodrag="" ng-click="edit($index,task.id)"><span class="glyphicon glyphicon-pencil"></span></a>
+    <div class="ng-binding">{{task.taskName}}</div>
+      </div>  -->
+      <task-tag></task-tag>
+    
+    </li>
+  </ol>
+</div>
+<br><br>
+<h4 class="markedtreeheading">Tasks completed</h4>
+<div ui-tree class="markedtree">
+  <ol ui-tree-nodes="markedtasks" ng-model="markedtasks">
+    <li ng-repeat="task in markedtasks" ui-tree-node>
+      <div ui-tree-handle>
+       <a class="pull-right btn btn-danger btn-xs" data-nodrag="" title="delete task" ng-click="deleteMarkedTask($index,task.id)"><span class="glyphicon glyphicon-remove"></span></a>
+       <a class="btn btn-primary btn-xs pull-right" data-nodrag="" title="unmark task"ng-click="unmarktask($index,task)"><span class="glyphicon glyphicon-hand-up"></span></a>
+      {{task.taskName}}
+      </div>
+    </li>
+  </ol>
+</div>  
+
+<!--  <div data-nodrag ng-show="editedItems[edittaskid]">
+              <form>
+               <input type="text" ng-model="newName"></br>
+                <button type="submit" class="btn btn-default" ng-click="editclose()">Save</button>
+                <button type="submit" class="btn btn-default" ng-click="cancelEditingGroup()">Cancel</button>
+              </form>
+    </div> -->
+<div class="sidebar-module">
+  <div class="tags">
+  <h4>Tags</h4>
+    <ol class="list-unstyled">
+      <li ng-repeat="tag in alltags"><a href="#">#{{tag.tagName}}</a>
+      </li>
+    </ol>
+  </div>
+  <div class="categories">
+    <h4>Categories</h4>
+    <ol class="list-unstyled">
+      <li ng-repeat="category in allcategories"><a href="#">{{category.categoryName}}</a>
+      </li>
+    </ol>
+  </div>
+</div>
+
+
+
+</div>

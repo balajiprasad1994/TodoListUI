@@ -1,0 +1,22 @@
+<div class="loginview">
+<a ng-href="register" class="showreg"> Don't have an account? Don't worry, click here!</a></li>
+<br><br>
+
+<form class="lform" ng-submit="login()">
+  <h2 class="lform-heading"> Login to your Todo! </h2>
+  <label class="sr-only">Username</label>
+  <input type="text" class="form-control" name="username" ng-model="user.un" placeholder="Username" required>
+  <br>
+  <label class="sr-only">Password</label>
+  <input type="password" class="form-control" name="password" ng-model="user.pw" placeholder="Password" required>
+  <br><br>
+  <button type="submit" class="btn btn-lg btn-primary btn-block">Show my Todo!</button>
+  <br><br>
+  <div ng-hide="success" class="wrong">Oops! You entered wrong details </div>
+</form>
+
+<footer class="footer">
+  <div class="container">
+  <p class="text-muted">Designed and developed at <a href= "http://www.townscript.com" target="_blank">Townscript</a> with &hearts;</p>
+  </div>
+</footer>

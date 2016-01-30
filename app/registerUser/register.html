@@ -1,0 +1,26 @@
+<div class="regform">
+<form class="rform" ng-submit="register()">
+  <h2 class="heading"> Register to get your Todo! </h2>
+ <label class="sr-only">Username</label>
+  <input type="text" name="username" ng-model = "user.un" class="form-control" placeholder="Username - no need of email id" required>
+  <br>
+  <label class="sr-only">Password</label>
+  <input type="password" name="password" ng-model = "user.pw" class="form-control" placeholder="Password - minimum 8 characters" required>
+  <br>
+  <label class="sr-only">Firstname</label>
+  <input type="text" name="firstname" ng-model = "user.fn" class="form-control" placeholder="Firstname" required>
+  <br>
+  <label class="sr-only">Lastname</label>
+  <input type="text" name="lastname" ng-model = "user.ln" class="form-control" placeholder="Lastname" required>
+  <br><br>
+  <button type="submit" class="btn btn-lg btn-primary btn-block">I want Todo!</button>
+  <br>
+  <div ng-show="success" class="correct"><b>Success, you now have your own Todo! <a ng-href="/login">Login </a> to get started!</b></div>
+</form>
+</div>
+
+<footer class="footer">
+  <div class="container">
+  <p class="text-muted">Designed and developed at <a href= "http://www.townscript.com" target="_blank">Townscript</a> with &hearts;</p>
+  </div>
+</footer>

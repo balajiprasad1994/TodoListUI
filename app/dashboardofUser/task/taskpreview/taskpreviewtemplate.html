@@ -1,0 +1,22 @@
+<div>
+<div ui-tree-handle ng-show="!getEditing()">
+    <a class="pull-right btn btn-danger btn-xs" data-nodrag="" title="delete task" ng-click="delete($index,task.id)"><span class="glyphicon glyphicon-remove"></span></a>
+    <a class="btn btn-primary btn-xs pull-right" data-nodrag="" title="mark task" ng-click="markcomplete($index,task)"><span class="glyphicon glyphicon-ok"></span></a>
+    <a href="" class="btn btn-primary btn-xs pull-right" data-nodrag="" title="change name" ng-click="edit()"><span class="glyphicon glyphicon-pencil"></span></a>
+    <a href="" class="btn btn-primary btn-xs pull-right" data-nodrag="" title="add category"ng-click="enableaddcategory()"><span class="glyphicon glyphicon-copyright-mark"></span></a>
+    <a href="" class="btn btn-primary btn-xs pull-right" data-nodrag="" title="add task" ng-click="enableaddtag()"><span class="glyphicon glyphicon-subscript"></span></a>
+    <div class="ng-binding">{{task.taskName}}</div>
+</div> 
+  <form ng-show="showaddtag" ng-submit="addtagtotask()">
+    <input type="text" ng-model="tagName" required></br>
+    <button type="submit" class="btn btn-default" ng-click="addtagtotask(task.id)">Add this Tag</button>
+    <button type="submit" class="btn btn-default" ng-click="cancelAddingTag()">Cancel</button>
+   </form>
+  <form ng-show="showaddcategory" ng-submit="addcategorytotask()">
+    <input type="text" ng-model="categoryName" required></br>
+    <button type="submit" class="btn btn-default" ng-click="addcategorytotask(task.id)">Add this Category</button>
+    <button type="submit" class="btn btn-default" ng-click="cancelAddingCategory()">Cancel</button>
+   </form>
+
+</div>
+

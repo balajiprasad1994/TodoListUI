@@ -1,0 +1,7 @@
+.bowerrc
+.jshintrc
+.project
+.travis.yml
+LICENSE
+karma.conf.js
+webpack.config.js
